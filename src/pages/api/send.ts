@@ -8,7 +8,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 		const { email, subject, html } = req.body;
 		try {
 			const data = await resend.emails.send({
-				from: 'ssimple <noreply@ssimple.co>',
+				from: 'ssimple notification <noreply@ssimple.co>',
 				to: [email],
 				subject,
 				html,

@@ -17,8 +17,7 @@ export default function Loading() {
 
 	return (
 		<div className="flex flex-col items-center justify-center h-screen">
-			<i className="fas fa-spinner fa-lg fa-pulse"></i>
-			<div className="mt-1 uppercase tracking-widest">{message[currentIndex]}</div>
+			<i className="fas fa-circle-notch fa-lg fa-pulse"></i>
 		</div>
 	)
 };

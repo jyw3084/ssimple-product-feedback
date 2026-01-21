@@ -1,4 +1,4 @@
-import { useAuth } from "../context/AuthContext";
+import { useAuth } from "@/context/AuthContext";
 import { useRouter } from "next/router";
 import { FormProvider, useForm } from "react-hook-form";
 
@@ -16,9 +16,9 @@ export default function Login() {
 	const onSubmit = async (data) => {
 		try {
 			const user = await logIn(data.email, data.password);
-			window.postMessage({ uid: user.user.uid });
 			router.push('/admin');
 		} catch (error) {
+			// console.log(error.message);
 			alert('Error logging in');
 		}
 	}
